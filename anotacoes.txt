@@ -1,0 +1,76 @@
+- Quem nunca trabalhou com testes?
+- Quem trabalha testes no projeto?
+    - voluntarios - mic - quais ferramentas?
+
+- Se funcionou está entregue? 
+
+- Qual é o seu conceito de DONE?
+    - Quando vc fala que sua tarefa acabou e pode pegar outra?
+
+- Testes validam que o que vc fez criou  
+    - Validam que alguem do time pode mexer sem medo 
+    - Validam que voce pode dormir aos fins de semana
+    - Validam que voce pode ir embora as 18 e ninguem vai te ligar as 23 no bar 
+- É fácil testar ?
+    - Testes dependem de uma boa arquitetura e/ou organização de codigo
+    - Baixo acoplamento e alta coesão 
+- Estou testando, mas nao sei o que testar
+    - Ferramentas de cobertura de codigo avisam o que falta testar
+    - Voce trabalha com uma taxa de cobertura entre seu time 
+  
+- Erick, meu chefe não deixa eu testar
+    - Testar demora, atrasa os projetos
+    - Falar do hubspotsync 
+    - Seu código, sua responsabilidade
+    - Inclua no tempo de entrega do projeto
+
+- Testes não são opcionais! Precisamos de confiança no código que fizemos e evitar o retrabalho
+    - Quanto custa um retrabalho? Ja parou para pensar quantas vezes voce foi e voltou na mesma task pq esqueceu algo bobo?
+
+- Test Driven Development
+    - Quem trabalha com TDD? 
+    - Quem nunca ouviu falar sobre TDD?
+    - Existem varias explicações na internet, sobre o fluxo do desenvolvimento
+    - O que quero mostrar a voces é algo que abre melhor a mente para pensar
+- Qual é a principal diferença de testar antes e testar depois?
+    - Vamos pensar num fluxo de dados 
+    Fazer Café
+
+
+    function fazerCafe() {
+        const agua = buscarAgua()
+        const cafe = buscarCafe()
+        const aguaQuente = esquentarAgua(agua)
+        const cafe = filtrar(agua, cafe)
+        return cafe
+    }
+
+    - Dessa forma, criamos a função de fazer café e pensamos em algo cronologico,
+    com TDD pensamos primeiro nas funcoes e por ultimo a função que chama todas elas 
+    encherCopo() {
+    }
+    filtrarAgua(agua) {
+    }
+    buscarAgua() {
+        const agua = encherCopo()
+        return filtrarAgua(agua)
+    }
+
+    verificarExistenciaDeCafe() {
+
+    }
+    buscarCafe() {
+        if(verificarExistenciaDeCafe){
+            return 'nao tem cafe'
+        }
+    }
+- Antes de finalizar, quero abrir para duvidas 
+
+- Conclusao
+    - Testar sua aplicação, não deveria ser algo opcional
+    - Você não precisa de permissão para entregar sua aplicação com testes
+    - Definir o conceito de DONE no seu time, facilita a comunicação e engajamento entre times 
+    - TDD não é ferramenta, é forma de pensar, treino leva à perfeição
+- Curso de Node.js que custa 1000 mas está com 100% de desconto
+- Quer acompanhar meus conteúdos? Acessa meu site e veja as palestras que tenho apresentado ao redor do mundo
+
